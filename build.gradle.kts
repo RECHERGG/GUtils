@@ -4,18 +4,19 @@ plugins {
     id("net.labymod.gradle.addon")
 }
 
-group = "org.example"
+group = "de.rechergg"
 version = "1.0.0"
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "de.rechergg.gutils" //change this to your main package name (used by all modules)
     addonInfo {
         namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        displayName = "GUtils"
+        iconUrl = "https://cdn.discordapp.com/attachments/1077591060794048594/1077599399024271390/Safeimagekit-resized-img_1.png"
+        author = "RECHERGG"
+        description = "GUtils (GrieferGames Utilities) is a LabyMod 4 Addon for GrieferGames."
         minecraftVersion = "*"
         version = System.getenv().getOrDefault("VERSION", "0.0.1")
     }
@@ -29,7 +30,7 @@ labyMod {
                 "1.18.2",
                 "1.19.2",
                 "1.19.3",
-                "23w06a"
+                "1.19.4-rc1"
         ) { version, provider ->
             configureRun(provider, version)
         }
